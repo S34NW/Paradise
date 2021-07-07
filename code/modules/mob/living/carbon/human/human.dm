@@ -917,6 +917,8 @@
 	var/obj/item/organ/internal/eyes/E = get_organ_slot("eyes")
 	if(E)
 		number += E.flash_protect
+	if(HAS_TRAIT(src, TRAIT_FLASH_VULNERABILITY))
+		number = FLASH_PROTECTION_SENSITIVE //this trait means you always have the least protection
 	return number
 
 /mob/living/carbon/human/check_ear_prot()
