@@ -49,6 +49,7 @@
 	GLOB.twitchblock        = getAssignedBlock("TWITCH",        numsToAssign)
 	GLOB.nervousblock       = getAssignedBlock("NERVOUS",       numsToAssign)
 	GLOB.wingdingsblock     = getAssignedBlock("WINGDINGS",     numsToAssign)
+	GLOB.aurablock          = getAssignedBlock("AURA",          numsToAssign, good=1)
 
 	// Bay muts
 	GLOB.breathlessblock    = getAssignedBlock("BREATHLESS",    numsToAssign, DNA_HARD_BOUNDS, good=1)

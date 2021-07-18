@@ -58,6 +58,9 @@
 /datum/atom_hud/data/hydroponic
 	hud_icons = list (PLANT_NUTRIENT_HUD, PLANT_WATER_HUD, PLANT_STATUS_HUD, PLANT_HEALTH_HUD, PLANT_TOXIN_HUD, PLANT_PEST_HUD, PLANT_WEED_HUD)
 
+/datum/atom_hud/data/aura
+	hud_icons = list(AURA_HUD)
+
 /* MED/SEC/DIAG HUD HOOKS */
 
 /*
@@ -506,3 +509,11 @@
 	if(!R.fields["comments"])
 		R.fields["comments"] = list()
 	R.fields["comments"] += list(comment_text)
+
+
+/mob/proc/update_aura()
+	var/image/holder = hud_list[AURA_HUD]
+	if(a_intent)
+		holder.icon_state = "hud[a_intent]"
+		holder.layer = MOB_LAYER-1 //under the mob
+		return

@@ -391,6 +391,7 @@ GLOBAL_LIST_INIT(intents, list(INTENT_HELP,INTENT_DISARM,INTENT_GRAB,INTENT_HARM
 					hud_used.action_intent.icon_state = "harm"
 				else
 					hud_used.action_intent.icon_state = "help"
+		update_aura()
 
 
 /mob/living/verb/mob_sleep()

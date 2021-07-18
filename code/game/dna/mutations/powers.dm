@@ -1180,3 +1180,25 @@
 	else
 		H.remoteview_target = null
 		H.reset_perspective()
+
+/datum/mutation/aura
+	name = "Aura Vision"
+	activation_messages = list("You can sense the intent of beings around you.")
+	deactivation_messages = list("You can no longer sense the intents of others.")
+	instability = GENE_INSTABILITY_MINOR
+
+/datum/mutation/aura/New()
+	..()
+	block = GLOB.aurablock
+
+/datum/mutation/aura/activate(mob/living/M)
+	..()
+	var/datum/atom_hud/H = GLOB.huds[AURA_HUD]
+	H.add_hud_to(M)
+	M.permanent_huds |= H
+
+/datum/mutation/aura/deactivate(mob/living/M)
+	..()
+	var/datum/atom_hud/H = GLOB.huds[AURA_HUD]
+	M.permanent_huds ^= H
+	H.remove_hud_from(M)

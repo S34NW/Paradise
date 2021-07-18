@@ -27,6 +27,7 @@
 #define DIAG_TRACK_HUD		"22"// Mech tracking beacon
 #define DIAG_PATH_HUD 		"23"//Bot path indicators
 #define GLAND_HUD 			"24"//Gland indicators for abductors
+#define AURA_HUD			"25" // Lets you see mob intents
 
 //by default everything in the hud_list of an atom is an image
 //a value in hud_list with one of these will change that behavior
