@@ -44,7 +44,7 @@ function toggleFilter(type) {
 			if (key != 'All') {
 				if (allTrue) {
 					allTrue = (val.show ? true : false);
-				} 
+				}
 				if (allFalse) {
 					allFalse = (val.show ? false : true);
 				}
@@ -75,14 +75,14 @@ function toggleFilter(type) {
 			}
 		}
 
-		var msg = (onoff ? 'Showing' : 'Filtering <strong>OUT</strong>') + " messages of type <strong>"+type+"</strong>";
+		var msg = (onoff ? 'Showing' : 'Filtering aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa <strong>OUT</strong>') + " messages of type <strong>"+type+"</strong>";
 		internalOutput('<span class="internal boldnshit">'+msg+'</span>');
 	}
 	console.log('filters is: ', opts.showMessagesFilters);
 }
 
 $subOptions.on('click', '#filterMessagesOpt', function (e) {
-	if ($('#filterMessages').is(':visible')) 
+	if ($('#filterMessages').is(':visible'))
 		return;
 
 	var content = '<div class="head">Filter Messsages</div>' +
