@@ -41,7 +41,7 @@ jobs:
       - name: Run Linters
         run: |
           tools/ci/check_json.sh
-          tools/ci/build_tgui.sh
+          tgui/bin/tgui --ci
           python tools/ci/check_grep2.py
           python tools/ci/check_line_endings.py
           python tools/ci/check_file_names.py
