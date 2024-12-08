@@ -50,7 +50,7 @@
 		return
 	toggle_light(!on)
 
-/turf/simulated/floor/light/attackby(obj/item/C, mob/user, params)
+/turf/simulated/floor/light/attackby__legacy__attackchain(obj/item/C, mob/user, params)
 	if(istype(C, /obj/item/light/bulb)) //only for light tiles
 		if(!light_broken)
 			qdel(C)
@@ -69,8 +69,8 @@
 	if(!I.use_tool(src, user, 0, volume = I.tool_volume))
 		return
 	if(!light_broken)
-		var/new_color = input(user, "Select a bulb color", "Select a bulb color", color) as color|null
-		if(!new_color)
+		var/new_color = tgui_input_color(user, "Select a bulb color", "Select a bulb color", color)
+		if(isnull(new_color))
 			return
 
 		// Cancel if they walked away
